@@ -185,7 +185,7 @@ body::before {
     display: none;
   }
   .home {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     padding: 0;
   }
   .home__details {
