@@ -1,0 +1,39 @@
+@use './variables' as *;
+
+// Layout
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h1,
+h2,
+p,
+span {
+	color: $text-primary-color;
+}
+
+section {
+	min-height: 100vh;
+}
+
+// Typography
+body {
+	background-color: $color-background-dark;
+	font-family: $text-sans;
+}
+
+h1,
+h2 {
+	font-family: $text-serif;
+	font-size: 2rem;
+	margin: 2rem 0;
+}
+
+p {
+	line-height: 32px;
+}
+
+a {
+	color: $text-primary-color;
+}

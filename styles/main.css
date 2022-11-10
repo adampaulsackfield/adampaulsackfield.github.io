@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;700&family=Inter:wght@100;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+p,
+span {
+  color: #fff;
+}
+
+section {
+  min-height: 100vh;
+}
+
+body {
+  background-color: #1c1a27;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Cormorant", serif;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+p {
+  line-height: 32px;
+}
+
+a {
+  color: #fff;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  background-color: #2a2835;
+  height: 100vh;
+  width: 70vw;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.nav {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  font-family: "Cormorant", serif;
+  letter-spacing: 1px;
+}
+.nav__logo {
+  color: #d3ff56;
+  margin-right: auto;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.nav__link {
+  margin-right: 3rem;
+  font-size: 1rem;
+  font-weight: 400;
+  display: none;
+}
+.nav__menu div {
+  width: 20px;
+  height: 2px;
+  background-color: #d3ff56;
+  margin: 4px 0;
+}
+.nav__menu div:nth-child(2) {
+  width: 9px;
+}
+.nav .accent {
+  border: solid 1px #d3ff56;
+  padding: 0.5rem 1.25rem;
+  transition: scale ease-in 300ms;
+}
+.nav .accent:hover {
+  scale: 1.1;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  align-items: center;
+  padding: 0 2rem;
+}
+.home__details {
+  grid-column: span 12;
+}
+.home__details h1 {
+  font-size: 2.5rem;
+}
+.home__details h1 span {
+  color: #d3ff56;
+}
+.home__details p {
+  padding: 1.5rem 0;
+}
+.home__details button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+.home__details button i {
+  padding-left: 1rem;
+  color: #d3ff56;
+  font-size: 1rem;
+}
+.home img {
+  max-width: 200px;
+}
+.home__image {
+  display: none;
+}
+.home__socials {
+  display: none;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 2rem;
+}
+.skills__content h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.skills__content p {
+  line-height: 2rem;
+  font-family: "Cormorant", serif;
+}
+.skills__icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+.skills__icons--wrapper {
+  width: 40%;
+}
+.skills__icons--wrapper i {
+  font-size: 4rem;
+  color: #2a2835;
+}
+.skills__icons--wrapper p {
+  font-size: 1rem;
+  color: #d3ff56;
+  font-family: "Cormorant", serif;
+}
+
+@media screen and (min-width: 768px) {
+  body::before {
+    height: 50vh;
+    width: 50vw;
+  }
+  .nav__link {
+    display: inherit;
+  }
+  .nav__menu {
+    display: none;
+  }
+  .home {
+    grid-template-rows: repeat(3, 1fr);
+    padding: 0;
+  }
+  .home__details {
+    display: inherit;
+    padding: 0 2rem;
+    grid-column: 1/13;
+  }
+  .home__image {
+    display: inherit;
+    grid-column: 5/9;
+    grid-row: 1/2;
+  }
+  .home__socials {
+    grid-column: -1;
+    grid-row: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 2rem;
+    background-color: #d3ff56;
+    padding: 1rem 1.8rem;
+  }
+  .home__socials i {
+    font-size: 2rem;
+  }
+  .home__socials p {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+  }
+  .home__socials a:nth-child(2) {
+    padding: 1.5rem 0;
+  }
+  .skills__content h1,
+.skills__content p {
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
+  .skills__icons {
+    gap: 3rem;
+  }
+  .skills__icons--wrapper {
+    width: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body::before {
+    height: 90vh;
+    width: 30vw;
+  }
+  .home {
+    margin-top: 5rem;
+  }
+  .home__details {
+    grid-column: 2/8;
+    grid-row: 1/2;
+  }
+  .home__image {
+    grid-column: 9/10;
+  }
+  .home__socials {
+    grid-column: -1;
+  }
+  .skills__content {
+    display: flex;
+    align-items: center;
+  }
+  .skills__content h1 {
+    margin-right: 4rem;
+  }
+}/*# sourceMappingURL=main.css.map */
