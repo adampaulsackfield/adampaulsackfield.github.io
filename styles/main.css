@@ -48,8 +48,8 @@ a {
 }
 
 body::before {
-  position: absolute;
   content: "";
+  position: absolute;
   background-color: #2a2835;
   height: 100vh;
   width: 70vw;
@@ -100,11 +100,13 @@ body::before {
 .home {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(10, 8vh);
   align-items: center;
   padding: 0 2rem;
 }
 .home__details {
   grid-column: span 12;
+  grid-row: 4/8;
 }
 .home__details h1 {
   font-size: 2.5rem;
@@ -173,9 +175,42 @@ body::before {
   font-family: "Cormorant", serif;
 }
 
+.portfolio {
+  padding: 0 2rem;
+}
+.portfolio h1 {
+  font-weight: 400;
+}
+.portfolio__header {
+  margin-bottom: 2rem;
+}
+.portfolio__filter a:not(:last-child) {
+  margin-right: 2rem;
+}
+.portfolio__filter--active {
+  border-bottom: solid 1px #d3ff56;
+}
+.portfolio__project {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.portfolio__project button {
+  background-color: #292734;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.portfolio__project hr {
+  margin-bottom: 1rem;
+  color: #272531;
+}
+
 @media screen and (min-width: 768px) {
   body::before {
-    height: 50vh;
+    height: 52vh;
     width: 50vw;
   }
   .nav__link {
@@ -185,22 +220,22 @@ body::before {
     display: none;
   }
   .home {
-    grid-template-rows: repeat(2, 1fr);
     padding: 0;
   }
   .home__details {
     display: inherit;
     padding: 0 2rem;
     grid-column: 1/13;
+    grid-row: 6/11;
   }
   .home__image {
     display: inherit;
-    grid-column: 5/9;
-    grid-row: 1/2;
+    grid-column: 5/8;
+    grid-row: 2/6;
   }
   .home__socials {
     grid-column: -1;
-    grid-row: 1/1;
+    grid-row: 3/3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,7 +268,7 @@ body::before {
 }
 @media screen and (min-width: 1024px) {
   body::before {
-    height: 90vh;
+    height: 75vh;
     width: 30vw;
   }
   .home {
@@ -241,13 +276,15 @@ body::before {
   }
   .home__details {
     grid-column: 2/8;
-    grid-row: 1/2;
+    grid-row: 4/7;
   }
   .home__image {
     grid-column: 9/10;
+    grid-row: 3/8;
   }
   .home__socials {
     grid-column: -1;
+    grid-row: 4/7;
   }
   .skills__content {
     display: flex;
