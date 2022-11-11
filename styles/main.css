@@ -180,6 +180,7 @@ body::before {
 }
 
 .portfolio {
+  margin-top: 4rem;
   padding: 0 2rem;
 }
 .portfolio h1 {
@@ -263,6 +264,8 @@ body::before {
   }
   .skills {
     min-height: inherit;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   .skills__content h1,
 .skills__content p {
@@ -313,6 +316,10 @@ body::before {
   .home__socials {
     grid-column: -1;
     grid-row: 4/7;
+  }
+  .skills {
+    margin-top: -12rem;
+    margin-bottom: 8rem;
   }
   .skills__content {
     display: flex;
