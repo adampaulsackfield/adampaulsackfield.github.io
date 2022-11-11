@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;700&family=Inter:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;700&family=Inter:wght@100;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +12,11 @@ a:visited {
   text-decoration: none;
 }
 
+* {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -20,7 +25,8 @@ a:visited {
 h1,
 h2,
 p,
-span {
+span,
+a {
   color: #fff;
 }
 
@@ -30,7 +36,6 @@ section {
 
 body {
   background-color: #1c1a27;
-  font-family: "Inter", sans-serif;
 }
 
 h1,
@@ -42,10 +47,6 @@ h2 {
 
 p {
   line-height: 32px;
-}
-
-a {
-  color: #fff;
 }
 
 .hide-mobile {
@@ -64,25 +65,24 @@ body::before {
 }
 
 .nav {
-  height: 4rem;
   display: flex;
   align-items: center;
+  height: 4rem;
   padding: 0 2rem;
-  font-family: "Cormorant", serif;
-  letter-spacing: 1px;
 }
 .nav__logo {
-  color: #d3ff56;
   margin-right: auto;
+  font-family: "Cormorant", serif;
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 2px;
+  color: #d3ff56;
 }
 .nav__link {
-  margin-right: 3rem;
-  font-size: 1rem;
-  font-weight: 400;
   display: none;
+  margin-right: 3rem;
+  font-family: "Cormorant", serif;
+  letter-spacing: 1px;
 }
 .nav__menu div {
   width: 20px;
@@ -115,26 +115,30 @@ body::before {
 }
 .home__details h1 {
   font-size: 2.5rem;
+  font-weight: 400;
 }
 .home__details h1 span {
   color: #d3ff56;
 }
 .home__details p {
   padding: 1.5rem 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
 }
 .home__details button {
   display: flex;
   align-items: center;
   background: transparent;
   border: none;
-  color: white;
+  color: #fff;
   font-size: 1rem;
+  font-weight: 300;
   margin-top: 2rem;
 }
 .home__details button i {
   padding-left: 1rem;
-  color: #d3ff56;
   font-size: 1rem;
+  color: #d3ff56;
 }
 .home img {
   max-width: 250px;
@@ -209,13 +213,13 @@ body::before {
   border: none;
   padding: 0.6rem 1rem;
   border-radius: 1rem;
-  color: white;
+  color: #fff;
   font-weight: 300;
   letter-spacing: 1px;
 }
 .portfolio__project hr {
   margin-bottom: 1rem;
-  color: #272531;
+  color: #373542;
 }
 
 .journey {
@@ -254,7 +258,7 @@ body::before {
   list-style: none;
 }
 .journey .experience__item ul li {
-  color: white;
+  color: #fff;
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.75);
   padding: 0.5rem 0;
@@ -283,7 +287,7 @@ body::before {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #2e2d38;
+  background-color: #2a2835;
   padding: 1rem;
 }
 .contact__header {
@@ -367,11 +371,12 @@ body::before {
   }
   .home__socials i {
     font-size: 2rem;
+    color: #2a2835;
   }
   .home__socials p {
     font-size: 1.2rem;
-    color: black;
     font-weight: bold;
+    color: #2a2835;
   }
   .home__socials a:nth-child(2) {
     padding: 1.5rem 0;
@@ -396,9 +401,6 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  .portfolio__filter {
-    font-family: "Inter", sans-serif;
   }
   .portfolio__filter a:not(:last-child) {
     margin-right: 0.5rem;
@@ -482,7 +484,6 @@ body::before {
   .portfolio__gallery h1 {
     font-size: 1.25rem;
     font-weight: 300;
-    font-family: "Inter", sans-serif;
     margin: 0.75rem 0;
   }
   .portfolio__gallery button {

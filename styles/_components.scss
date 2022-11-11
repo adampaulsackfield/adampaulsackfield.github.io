@@ -6,7 +6,7 @@
 body::before {
 	content: '';
 	position: absolute;
-	background-color: $color-background-corner;
+	background-color: $background-light;
 	height: 100vh;
 	width: 70vw;
 	top: 0;
@@ -17,27 +17,25 @@ body::before {
 
 // ! NAVIGATION START
 .nav {
-	height: 4rem;
 	display: flex;
 	align-items: center;
+	height: 4rem;
 	padding: 0 2rem;
-	font-family: $text-serif;
-	letter-spacing: 1px;
 
 	&__logo {
-		color: $text-secondary-color;
 		margin-right: auto;
+		font-family: $text-serif;
 		font-size: 2.5rem;
 		font-weight: 700;
 		letter-spacing: 2px;
+		color: $accent;
 	}
 
 	&__link {
-		margin-right: 3rem;
-		font-size: 1rem;
-		font-weight: 400;
-
 		display: none;
+		margin-right: 3rem;
+		font-family: $text-serif;
+		letter-spacing: 1px;
 	}
 
 	// Mobile Menu - Hamburger
@@ -46,7 +44,7 @@ body::before {
 			width: 20px;
 			height: 2px;
 			margin: 4px 0;
-			background-color: $text-secondary-color;
+			background-color: $accent;
 
 			&:nth-child(2) {
 				width: 9px;
@@ -55,7 +53,7 @@ body::before {
 	}
 	// Get in Touch Button - Slight hover effect
 	.accent {
-		border: solid 1px $text-secondary-color;
+		border: solid 1px $accent;
 		padding: 0.5rem 1.25rem;
 
 		transition: scale ease-in 300ms;
@@ -82,14 +80,17 @@ body::before {
 
 		h1 {
 			font-size: 2.5rem;
+			font-weight: 400;
 
 			span {
-				color: $text-secondary-color;
+				color: $accent;
 			}
 		}
 
 		p {
 			padding: 1.5rem 0;
+			color: $text-grey-dark;
+			font-weight: 300;
 		}
 
 		button {
@@ -97,15 +98,16 @@ body::before {
 			align-items: center;
 			background: transparent;
 			border: none;
-			color: white;
+			color: $text-white;
 			font-size: 1rem;
+			font-weight: 300;
 
 			margin-top: 2rem;
 
 			i {
 				padding-left: 1rem;
-				color: $text-secondary-color;
 				font-size: 1rem;
+				color: $accent;
 			}
 		}
 	}
@@ -157,12 +159,12 @@ body::before {
 
 			i {
 				font-size: 4rem;
-				color: $color-background-corner;
+				color: $background-light;
 			}
 
 			p {
 				font-size: 1rem;
-				color: $text-secondary-color;
+				color: $accent;
 				font-family: $text-serif;
 			}
 		}
@@ -193,7 +195,7 @@ body::before {
 		}
 
 		&--active {
-			border-bottom: solid 1px $text-secondary-color;
+			border-bottom: solid 1px $accent;
 			color: #fff !important;
 		}
 	}
@@ -203,18 +205,18 @@ body::before {
 		margin-bottom: 2rem;
 
 		button {
-			background-color: $color-button-background;
+			background-color: $background-button-dark;
 			border: none;
 			padding: 0.6rem 1rem;
 			border-radius: 1rem;
-			color: white;
+			color: $text-white;
 			font-weight: 300;
 			letter-spacing: 1px;
 		}
 
 		hr {
 			margin-bottom: 1rem;
-			color: $color-horizontal-rule;
+			color: $horizontal-rule;
 		}
 	}
 }
@@ -250,7 +252,7 @@ body::before {
 
 				i {
 					float: right;
-					color: $text-secondary-color;
+					color: $accent;
 				}
 			}
 
@@ -265,7 +267,7 @@ body::before {
 				list-style: none;
 
 				li {
-					color: white;
+					color: $text-white;
 					font-size: 0.75rem;
 					color: rgba(255, 255, 255, 0.75);
 					padding: 0.5rem 0;
@@ -273,7 +275,7 @@ body::before {
 				// Used to add different coloured bullet points using pseudo elements.
 				li::before {
 					content: '\2022';
-					color: $text-secondary-color;
+					color: $accent;
 					font-weight: bold;
 					display: inline-block;
 					width: 1rem;
@@ -284,7 +286,7 @@ body::before {
 	}
 
 	.accent {
-		color: $text-secondary-color;
+		color: $accent;
 		font-size: 1.25rem;
 		font-family: $text-serif;
 		font-weight: 300;
@@ -302,7 +304,7 @@ body::before {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	background-color: $color-background-contact;
+	background-color: $background-light;
 	padding: 1rem;
 
 	&__header {
@@ -310,7 +312,7 @@ body::before {
 		font-weight: 500;
 
 		&--accent {
-			color: $text-secondary-color;
+			color: $accent;
 		}
 	}
 
@@ -327,11 +329,11 @@ body::before {
 		background-color: #474650;
 		border: none;
 		border-radius: 55px;
-		color: $text-secondary-color;
+		color: $accent;
 		font-weight: 300;
 
 		i {
-			color: $text-secondary-color;
+			color: $accent;
 			margin-left: 0.25rem;
 		}
 	}
@@ -343,7 +345,7 @@ body::before {
 	margin-top: 4rem;
 	width: 100vw;
 
-	background-color: $text-secondary-color;
+	background-color: $accent;
 }
 
 .footer {
@@ -401,16 +403,17 @@ body::before {
 			flex-direction: column;
 			align-items: center;
 			padding: 1rem 1.8rem;
-			background-color: $text-secondary-color;
+			background-color: $accent;
 
 			i {
 				font-size: 2rem;
+				color: $background-light;
 			}
 
 			p {
 				font-size: 1.2rem;
-				color: black;
 				font-weight: bold;
+				color: $background-light;
 			}
 
 			a:nth-child(2) {
@@ -449,7 +452,6 @@ body::before {
 		}
 
 		&__filter {
-			font-family: $text-sans;
 			a:not(:last-child) {
 				margin-right: 0.5rem;
 			}
@@ -564,7 +566,6 @@ body::before {
 			h1 {
 				font-size: 1.25rem;
 				font-weight: 300;
-				font-family: $text-sans;
 				margin: 0.75rem 0;
 			}
 			button {
