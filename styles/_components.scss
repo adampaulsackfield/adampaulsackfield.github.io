@@ -338,6 +338,29 @@ body::before {
 }
 // ! CONTACT END
 
+// ! FOOTER START
+.footer-background {
+	margin-top: 4rem;
+	width: 100vw;
+
+	background-color: $text-secondary-color;
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+
+	h1,
+	p {
+		color: $text-color-dark;
+	}
+
+	h1 {
+		margin-left: auto;
+	}
+}
+// ! FOOTER END
+
 // ! TABLET BREAKPOINT START
 @media screen and (min-width: $tablet-breakpoint) {
 	body::before {
@@ -477,6 +500,11 @@ body::before {
 			margin-bottom: 3rem;
 		}
 	}
+
+	// Footer
+	.footer {
+		padding: 0 2rem;
+	}
 }
 // ! TABLET BREAKPOINT END
 
@@ -584,6 +612,11 @@ body::before {
 		&__header {
 			font-size: 3rem;
 		}
+	}
+
+	// Footer
+	.footer {
+		padding: 0;
 	}
 }
 // ! DESKTOP BREAKPOINT START

@@ -313,6 +313,24 @@ body::before {
   margin-left: 0.25rem;
 }
 
+.footer-background {
+  margin-top: 4rem;
+  width: 100vw;
+  background-color: #d3ff56;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+}
+.footer h1,
+.footer p {
+  color: #1c1a27;
+}
+.footer h1 {
+  margin-left: auto;
+}
+
 @media screen and (min-width: 768px) {
   body::before {
     height: 52vh;
@@ -418,6 +436,9 @@ body::before {
   .contact__text {
     margin-bottom: 3rem;
   }
+  .footer {
+    padding: 0 2rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   body::before {
@@ -496,5 +517,8 @@ body::before {
   }
   .contact__header {
     font-size: 3rem;
+  }
+  .footer {
+    padding: 0;
   }
 }/*# sourceMappingURL=main.css.map */
