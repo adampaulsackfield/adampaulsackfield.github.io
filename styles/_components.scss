@@ -162,6 +162,7 @@ body::before {
 // ! PORTFOLIO START
 .portfolio {
 	padding: 0 2rem;
+	@include gradient;
 
 	&__header {
 		margin-bottom: 2rem;
@@ -350,6 +351,8 @@ body::before {
 .footer {
 	display: flex;
 	align-items: center;
+	padding: 0 2rem;
+	@include gradient;
 
 	h1,
 	p {
@@ -509,7 +512,7 @@ body::before {
 // ! DESKTOP BREAKPOINT START
 @media screen and (min-width: $desktop-breakpoint) {
 	body::before {
-		height: 75vh;
+		height: 90vh;
 		width: 30vw;
 	}
 
