@@ -37,3 +37,8 @@ p {
 a {
 	color: $text-primary-color;
 }
+
+// Helper Classes
+.hide-mobile {
+	display: none;
+}
