@@ -2,6 +2,7 @@
 @use './mixins' as *;
 
 // Layout
+// Absolute positioning used to place the corner color. Used a z-index of -1 to show all other content above.
 body::before {
 	content: '';
 	position: absolute;
@@ -38,21 +39,20 @@ body::before {
 		display: none;
 	}
 
+	// Mobile Menu - Hamburger
 	&__menu {
-		// z-index: 1000;
-
 		div {
 			width: 20px;
 			height: 2px;
-			background-color: $text-secondary-color;
 			margin: 4px 0;
+			background-color: $text-secondary-color;
 
 			&:nth-child(2) {
 				width: 9px;
 			}
 		}
 	}
-
+	// Get in Touch Button - Slight hover effect
 	.accent {
 		border: solid 1px $text-secondary-color;
 		padding: 0.5rem 1.25rem;
@@ -109,7 +109,7 @@ body::before {
 	}
 
 	img {
-		max-width: 200px;
+		max-width: 250px;
 	}
 
 	&__image {
@@ -179,21 +179,23 @@ body::before {
 	}
 
 	&__filter {
+		a {
+			color: rgba(#fff, 0.5);
+		}
+
 		a:not(:last-child) {
 			margin-right: 2rem;
 		}
 
 		&--active {
 			border-bottom: solid 1px $text-secondary-color;
+			color: #fff !important;
 		}
 	}
 
 	&__project {
 		width: 100%;
 		margin-bottom: 2rem;
-
-		h1 {
-		}
 
 		button {
 			background-color: $color-button-background;
@@ -228,13 +230,11 @@ body::before {
 
 	// Home
 	.home {
-		// grid-template-rows: repeat(2, 1fr);
 		padding: 0;
 
 		&__details {
 			display: inherit;
 			padding: 0 2rem;
-			grid-column: 1 / 13;
 			grid-row: 6 / 11;
 		}
 
@@ -245,14 +245,15 @@ body::before {
 		}
 
 		&__socials {
+			width: 2rem;
 			grid-column: -1;
 			grid-row: 3 / 3;
+
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			width: 2rem;
-			background-color: $text-secondary-color;
 			padding: 1rem 1.8rem;
+			background-color: $text-secondary-color;
 
 			i {
 				font-size: 2rem;
@@ -272,6 +273,8 @@ body::before {
 
 	// Skills
 	.skills {
+		min-height: inherit;
+
 		&__content {
 			h1,
 			p {
@@ -284,6 +287,27 @@ body::before {
 			&--wrapper {
 				width: auto;
 			}
+		}
+	}
+
+	// Portfolio
+	.portfolio {
+		&__header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__filter {
+			font-family: $text-sans;
+			a:not(:last-child) {
+				margin-right: 0.5rem;
+			}
+		}
+
+		&__gallery {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 }
@@ -323,6 +347,14 @@ body::before {
 			h1 {
 				margin-right: 4rem;
 			}
+		}
+	}
+
+	// Portfolio
+	.portfolio {
+		&__gallery {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 2rem;
 		}
 	}
 }

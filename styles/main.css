@@ -12,7 +12,7 @@ a:visited {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -82,8 +82,8 @@ body::before {
 .nav__menu div {
   width: 20px;
   height: 2px;
-  background-color: #d3ff56;
   margin: 4px 0;
+  background-color: #d3ff56;
 }
 .nav__menu div:nth-child(2) {
   width: 9px;
@@ -132,7 +132,7 @@ body::before {
   font-size: 1rem;
 }
 .home img {
-  max-width: 200px;
+  max-width: 250px;
 }
 .home__image {
   display: none;
@@ -184,11 +184,15 @@ body::before {
 .portfolio__header {
   margin-bottom: 2rem;
 }
+.portfolio__filter a {
+  color: rgba(255, 255, 255, 0.5);
+}
 .portfolio__filter a:not(:last-child) {
   margin-right: 2rem;
 }
 .portfolio__filter--active {
   border-bottom: solid 1px #d3ff56;
+  color: #fff !important;
 }
 .portfolio__project {
   width: 100%;
@@ -225,7 +229,6 @@ body::before {
   .home__details {
     display: inherit;
     padding: 0 2rem;
-    grid-column: 1/13;
     grid-row: 6/11;
   }
   .home__image {
@@ -234,14 +237,14 @@ body::before {
     grid-row: 2/6;
   }
   .home__socials {
+    width: 2rem;
     grid-column: -1;
     grid-row: 3/3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 2rem;
-    background-color: #d3ff56;
     padding: 1rem 1.8rem;
+    background-color: #d3ff56;
   }
   .home__socials i {
     font-size: 2rem;
@@ -254,6 +257,9 @@ body::before {
   .home__socials a:nth-child(2) {
     padding: 1.5rem 0;
   }
+  .skills {
+    min-height: inherit;
+  }
   .skills__content h1,
 .skills__content p {
     -moz-text-align-last: left;
@@ -264,6 +270,21 @@ body::before {
   }
   .skills__icons--wrapper {
     width: auto;
+  }
+  .portfolio__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .portfolio__filter {
+    font-family: "Inter", sans-serif;
+  }
+  .portfolio__filter a:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+  .portfolio__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -292,5 +313,9 @@ body::before {
   }
   .skills__content h1 {
     margin-right: 4rem;
+  }
+  .portfolio__gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */
