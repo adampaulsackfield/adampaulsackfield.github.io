@@ -1,7 +1,7 @@
 @use './variables' as *;
 @use './mixins' as *;
 
-// Layout
+// ! LAYOUT START
 // Absolute positioning used to place the corner color. Used a z-index of -1 to show all other content above.
 body::before {
 	content: '';
@@ -13,8 +13,9 @@ body::before {
 	right: 0;
 	z-index: -1;
 }
+// ! LAYOUT END
 
-// Navigation
+// ! NAVIGATION START
 .nav {
 	height: 4rem;
 	display: flex;
@@ -64,8 +65,9 @@ body::before {
 		}
 	}
 }
+// ! NAVIGATION END
 
-// Home
+// ! HOME START
 .home {
 	display: grid;
 	grid-template-columns: repeat(11, 1fr);
@@ -120,8 +122,9 @@ body::before {
 		display: none;
 	}
 }
+// ! HOME END
 
-// Skills
+// ! SKILLS START
 .skills {
 	display: flex;
 	flex-direction: column;
@@ -165,8 +168,9 @@ body::before {
 		}
 	}
 }
+// ! SKILLS END
 
-// Portfolio
+// ! PORTFOLIO START
 .portfolio {
 	margin-top: 4rem;
 	padding: 0 2rem;
@@ -214,7 +218,83 @@ body::before {
 		}
 	}
 }
+// ! PORTFOLIO END
 
+// ! JOURNEY START
+.journey {
+	display: grid;
+	padding: 0 2rem;
+
+	&__header {
+		font-weight: 400;
+	}
+
+	&__text {
+		font-weight: 300;
+	}
+
+	&__image img {
+		width: 80vw;
+		margin: 2rem 0;
+	}
+
+	&__experience {
+		display: flex;
+		flex-direction: column;
+	}
+	.experience {
+		&__item {
+			h1 {
+				font-size: 1rem;
+				margin-bottom: 0;
+
+				i {
+					float: right;
+					color: $text-secondary-color;
+				}
+			}
+
+			h2 {
+				font-size: 0.8rem;
+				font-weight: 400;
+				margin-top: 0;
+				color: rgba(255, 255, 255, 0.75);
+			}
+
+			ul {
+				list-style: none;
+
+				li {
+					color: white;
+					font-size: 0.75rem;
+					color: rgba(255, 255, 255, 0.75);
+					padding: 0.5rem 0;
+				}
+				// Used to add different coloured bullet points using pseudo elements.
+				li::before {
+					content: '\2022';
+					color: $text-secondary-color;
+					font-weight: bold;
+					display: inline-block;
+					width: 1rem;
+					margin-left: -1rem;
+				}
+			}
+		}
+	}
+
+	.accent {
+		color: $text-secondary-color;
+		font-size: 1.25rem;
+		font-family: $text-serif;
+		font-weight: 300;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+	}
+}
+// ! JOURNEY END
+
+// ! TABLET BREAKPOINT START
 @media screen and (min-width: $tablet-breakpoint) {
 	body::before {
 		height: 52vh;
@@ -317,8 +397,33 @@ body::before {
 			display: block;
 		}
 	}
-}
 
+	// Journey
+	.journey {
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: 1fr 2fr 4fr;
+
+		&__header {
+			grid-column: 1 / 9;
+		}
+
+		&__text {
+			grid-column: 4 / 9;
+			grid-row: 2 / 3;
+		}
+
+		&__experience {
+			grid-column: 4 / 9;
+		}
+
+		&__image {
+			display: none;
+		}
+	}
+}
+// ! TABLET BREAKPOINT END
+
+// ! DESKTOP BREAKPOINT START
 @media screen and (min-width: $desktop-breakpoint) {
 	body::before {
 		height: 75vh;
@@ -390,4 +495,29 @@ body::before {
 			display: block;
 		}
 	}
+
+	// Journey
+	.journey {
+		grid-template-rows: 1fr 2fr;
+
+		&__header {
+			grid-column: 1 / 3;
+			font-size: 2.5rem;
+		}
+
+		&__text {
+			grid-column: 4 / 9;
+			grid-row: inherit;
+		}
+
+		&__experience {
+			grid-column: 4 / 9;
+			grid-row: 2;
+		}
+
+		&__image {
+			display: none;
+		}
+	}
 }
+// ! DESKTOP BREAKPOINT START
