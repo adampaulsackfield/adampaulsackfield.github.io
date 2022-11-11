@@ -1,4 +1,8 @@
 @use './variables' as *;
+* {
+	font-family: $text-sans;
+	font-weight: 300;
+}
 
 // Layout
 .container {
@@ -9,8 +13,9 @@
 h1,
 h2,
 p,
-span {
-	color: $text-primary-color;
+span,
+a {
+	color: $text-white;
 }
 
 section {
@@ -19,8 +24,7 @@ section {
 
 // Typography
 body {
-	background-color: $color-background-dark;
-	font-family: $text-sans;
+	background-color: $background-dark;
 }
 
 h1,
@@ -32,10 +36,6 @@ h2 {
 
 p {
 	line-height: 32px;
-}
-
-a {
-	color: $text-primary-color;
 }
 
 // Helper Classes
