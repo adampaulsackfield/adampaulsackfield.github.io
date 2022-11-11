@@ -204,8 +204,9 @@ body::before {
   border: none;
   padding: 0.6rem 1rem;
   border-radius: 1rem;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 300;
+  font-size: 0.5rem;
   letter-spacing: 1px;
 }
 .portfolio__project hr {
@@ -217,20 +218,28 @@ body::before {
   display: grid;
   padding: 0 2rem;
 }
-.journey__text {
-  font-weight: 300;
+.journey__text p {
+  color: rgba(255, 255, 255, 0.75);
+}
+.journey__image {
+  justify-self: center;
 }
 .journey__image img {
-  width: 80vw;
-  margin: 2rem 0;
+  height: 400px;
+  margin: 2rem auto;
 }
 .journey__experience {
   display: flex;
   flex-direction: column;
 }
+.journey hr {
+  color: #373542;
+  margin: 2rem 0 3rem;
+}
 .journey .experience__item h1 {
   font-size: 1rem;
   margin-bottom: 0;
+  font-weight: 700;
 }
 .journey .experience__item h1 i {
   float: right;
@@ -400,11 +409,10 @@ body::before {
     grid-template-rows: 1fr 2fr 4fr;
   }
   .journey__header {
-    grid-column: 1/9;
+    grid-column: 2/9;
   }
   .journey__text {
     grid-column: 4/9;
-    grid-row: 2/3;
   }
   .journey__experience {
     grid-column: 4/9;
@@ -476,18 +484,17 @@ body::before {
   }
   .journey {
     grid-template-rows: 1fr 2fr;
+    align-items: baseline;
   }
   .journey__header {
-    grid-column: 1/3;
+    grid-column: 2/4;
     font-size: 2.5rem;
   }
   .journey__text {
-    grid-column: 4/9;
-    grid-row: inherit;
+    grid-column: 4/8;
   }
   .journey__experience {
-    grid-column: 4/9;
-    grid-row: 2;
+    grid-column: 4/8;
   }
   .journey__image {
     display: none;
