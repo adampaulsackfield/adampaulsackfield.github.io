@@ -276,6 +276,43 @@ body::before {
   margin-bottom: 0;
 }
 
+.contact {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #2e2d38;
+  padding: 1rem;
+}
+.contact__header {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.contact__header--accent {
+  color: #d3ff56;
+}
+.contact__text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 25px;
+  margin-bottom: 2rem;
+}
+.contact__button {
+  padding: 0.8rem 1rem;
+  background-color: #474650;
+  border: none;
+  border-radius: 55px;
+  color: #d3ff56;
+  font-weight: 300;
+}
+.contact__button i {
+  color: #d3ff56;
+  margin-left: 0.25rem;
+}
+
 @media screen and (min-width: 768px) {
   body::before {
     height: 52vh;
@@ -372,6 +409,15 @@ body::before {
   .journey__image {
     display: none;
   }
+  .contact {
+    width: 80vw;
+  }
+  .contact__header {
+    font-size: 2rem;
+  }
+  .contact__text {
+    margin-bottom: 3rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   body::before {
@@ -444,5 +490,11 @@ body::before {
   }
   .journey__image {
     display: none;
+  }
+  .contact {
+    width: 60vw;
+  }
+  .contact__header {
+    font-size: 3rem;
   }
 }/*# sourceMappingURL=main.css.map */

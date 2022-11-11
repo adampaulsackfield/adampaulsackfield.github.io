@@ -294,6 +294,50 @@ body::before {
 }
 // ! JOURNEY END
 
+// ! CONTACT START
+.contact {
+	width: 90vw;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background-color: $color-background-contact;
+	padding: 1rem;
+
+	&__header {
+		font-size: 1.5rem;
+		font-weight: 500;
+
+		&--accent {
+			color: $text-secondary-color;
+		}
+	}
+
+	&__text {
+		color: rgba(255, 255, 255, 0.75);
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 25px;
+		margin-bottom: 2rem;
+	}
+
+	&__button {
+		padding: 0.8rem 1rem;
+		background-color: #474650;
+		border: none;
+		border-radius: 55px;
+		color: $text-secondary-color;
+		font-weight: 300;
+
+		i {
+			color: $text-secondary-color;
+			margin-left: 0.25rem;
+		}
+	}
+}
+// ! CONTACT END
+
 // ! TABLET BREAKPOINT START
 @media screen and (min-width: $tablet-breakpoint) {
 	body::before {
@@ -420,6 +464,19 @@ body::before {
 			display: none;
 		}
 	}
+
+	// Contact
+	.contact {
+		width: 80vw;
+
+		&__header {
+			font-size: 2rem;
+		}
+
+		&__text {
+			margin-bottom: 3rem;
+		}
+	}
 }
 // ! TABLET BREAKPOINT END
 
@@ -517,6 +574,15 @@ body::before {
 
 		&__image {
 			display: none;
+		}
+	}
+
+	// Contact
+	.contact {
+		width: 60vw;
+
+		&__header {
+			font-size: 3rem;
 		}
 	}
 }
