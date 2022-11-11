@@ -161,11 +161,7 @@ body::before {
 
 // ! PORTFOLIO START
 .portfolio {
-	margin-top: 4rem;
 	padding: 0 2rem;
-
-	h1 {
-	}
 
 	&__header {
 		margin-bottom: 2rem;
@@ -173,23 +169,30 @@ body::before {
 
 	&__filter {
 		a {
-			color: rgba(#fff, 0.5);
-		}
+			color: $text-grey-dark;
 
-		a:not(:last-child) {
-			margin-right: 2rem;
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
 		}
 
 		&--active {
-			border-bottom: solid 1px $accent;
-			color: #fff !important;
+			padding-bottom: 0.5rem;
+			border-bottom: solid 2px $accent;
+			color: $text-white !important;
+			font-weight: 700;
+			letter-spacing: 2px;
 		}
 	}
 
-	&__project {
-		width: 100%;
-		margin-bottom: 2rem;
+	&__gallery {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
 
+	&__project {
 		button {
 			background-color: $background-button-dark;
 			border: none;
@@ -439,8 +442,10 @@ body::before {
 		}
 
 		&__gallery {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			justify-content: center;
 		}
 
 		.show-tablet {
@@ -540,11 +545,6 @@ body::before {
 		// overflow-x: hidden;
 
 		&__gallery {
-			max-width: 100%;
-
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			gap: 2rem;
-
 			h1 {
 				font-size: 1.25rem;
 				font-weight: 300;
