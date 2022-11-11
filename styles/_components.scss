@@ -69,8 +69,6 @@ body::before {
 .home {
 	display: grid;
 	grid-template-columns: repeat(11, 1fr);
-
-	// align-items: center;
 	padding: 0 2rem;
 
 	&__details {
@@ -79,7 +77,6 @@ body::before {
 
 		h1 {
 			font-size: 2.5rem;
-			font-weight: 400;
 
 			span {
 				color: $accent;
@@ -127,21 +124,13 @@ body::before {
 
 // ! SKILLS START
 .skills {
-	display: flex;
-	flex-direction: column;
 	text-align: center;
 
 	padding: 0 2rem;
 
 	&__content {
-		h1 {
-			font-size: 2rem;
-			font-weight: 400;
-		}
-
 		p {
-			line-height: 2rem;
-			font-family: $text-serif;
+			color: $text-grey-dark;
 		}
 	}
 
@@ -149,7 +138,6 @@ body::before {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 0.6rem;
 
 		margin-top: 2rem;
 
@@ -177,7 +165,6 @@ body::before {
 	padding: 0 2rem;
 
 	h1 {
-		font-weight: 400;
 	}
 
 	&__header {
@@ -227,7 +214,6 @@ body::before {
 	padding: 0 2rem;
 
 	&__header {
-		font-weight: 400;
 	}
 
 	&__text {
@@ -257,7 +243,7 @@ body::before {
 
 			h2 {
 				font-size: 0.8rem;
-				font-weight: 400;
+
 				margin-top: 0;
 				color: rgba(255, 255, 255, 0.75);
 			}
@@ -425,9 +411,8 @@ body::before {
 		margin: 0 auto;
 
 		&__content {
-			h1,
 			p {
-				text-align-last: left;
+				text-align: left;
 			}
 		}
 
@@ -544,6 +529,7 @@ body::before {
 
 			h1 {
 				margin-right: 4rem;
+				font-size: 2.5rem;
 			}
 		}
 	}

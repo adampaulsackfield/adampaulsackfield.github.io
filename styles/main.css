@@ -41,6 +41,7 @@ body {
 h1,
 h2 {
   font-family: "Cormorant", serif;
+  font-weight: 400;
   font-size: 2rem;
   margin: 2rem 0;
 }
@@ -113,7 +114,6 @@ body::before {
 }
 .home__details h1 {
   font-size: 2.5rem;
-  font-weight: 400;
 }
 .home__details h1 span {
   color: #d3ff56;
@@ -149,24 +149,16 @@ body::before {
 }
 
 .skills {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   padding: 0 2rem;
 }
-.skills__content h1 {
-  font-size: 2rem;
-  font-weight: 400;
-}
 .skills__content p {
-  line-height: 2rem;
-  font-family: "Cormorant", serif;
+  color: rgba(255, 255, 255, 0.5);
 }
 .skills__icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.6rem;
   margin-top: 2rem;
 }
 .skills__icons--wrapper {
@@ -185,9 +177,6 @@ body::before {
 .portfolio {
   margin-top: 4rem;
   padding: 0 2rem;
-}
-.portfolio h1 {
-  font-weight: 400;
 }
 .portfolio__header {
   margin-bottom: 2rem;
@@ -224,9 +213,6 @@ body::before {
   display: grid;
   padding: 0 2rem;
 }
-.journey__header {
-  font-weight: 400;
-}
 .journey__text {
   font-weight: 300;
 }
@@ -248,7 +234,6 @@ body::before {
 }
 .journey .experience__item h2 {
   font-size: 0.8rem;
-  font-weight: 400;
   margin-top: 0;
   color: rgba(255, 255, 255, 0.75);
 }
@@ -381,10 +366,8 @@ body::before {
     max-width: 1000px;
     margin: 0 auto;
   }
-  .skills__content h1,
-.skills__content p {
-    -moz-text-align-last: left;
-         text-align-last: left;
+  .skills__content p {
+    text-align: left;
   }
   .skills__icons {
     gap: 3rem;
@@ -467,6 +450,7 @@ body::before {
   }
   .skills__content h1 {
     margin-right: 4rem;
+    font-size: 2.5rem;
   }
   .portfolio {
     max-width: 100vw;
