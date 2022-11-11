@@ -2,9 +2,10 @@
 @use './mixins' as *;
 
 // Layout
+// Absolute positioning used to place the corner color. Used a z-index of -1 to show all other content above.
 body::before {
-	position: absolute;
 	content: '';
+	position: absolute;
 	background-color: $color-background-corner;
 	height: 100vh;
 	width: 70vw;
@@ -38,21 +39,20 @@ body::before {
 		display: none;
 	}
 
+	// Mobile Menu - Hamburger
 	&__menu {
-		// z-index: 1000;
-
 		div {
 			width: 20px;
 			height: 2px;
-			background-color: $text-secondary-color;
 			margin: 4px 0;
+			background-color: $text-secondary-color;
 
 			&:nth-child(2) {
 				width: 9px;
 			}
 		}
 	}
-
+	// Get in Touch Button - Slight hover effect
 	.accent {
 		border: solid 1px $text-secondary-color;
 		padding: 0.5rem 1.25rem;
@@ -69,11 +69,14 @@ body::before {
 .home {
 	display: grid;
 	grid-template-columns: repeat(11, 1fr);
+	grid-template-rows: repeat(10, 8vh);
+
 	align-items: center;
 	padding: 0 2rem;
 
 	&__details {
 		grid-column: span 12;
+		grid-row: 4 / 8;
 
 		h1 {
 			font-size: 2.5rem;
@@ -106,7 +109,7 @@ body::before {
 	}
 
 	img {
-		max-width: 200px;
+		max-width: 250px;
 	}
 
 	&__image {
@@ -163,9 +166,57 @@ body::before {
 	}
 }
 
+// Portfolio
+.portfolio {
+	padding: 0 2rem;
+
+	h1 {
+		font-weight: 400;
+	}
+
+	&__header {
+		margin-bottom: 2rem;
+	}
+
+	&__filter {
+		a {
+			color: rgba(#fff, 0.5);
+		}
+
+		a:not(:last-child) {
+			margin-right: 2rem;
+		}
+
+		&--active {
+			border-bottom: solid 1px $text-secondary-color;
+			color: #fff !important;
+		}
+	}
+
+	&__project {
+		width: 100%;
+		margin-bottom: 2rem;
+
+		button {
+			background-color: $color-button-background;
+			border: none;
+			padding: 0.6rem 1rem;
+			border-radius: 1rem;
+			color: white;
+			font-weight: 300;
+			letter-spacing: 1px;
+		}
+
+		hr {
+			margin-bottom: 1rem;
+			color: $color-horizontal-rule;
+		}
+	}
+}
+
 @media screen and (min-width: $tablet-breakpoint) {
 	body::before {
-		height: 50vh;
+		height: 52vh;
 		width: 50vw;
 	}
 
@@ -179,30 +230,30 @@ body::before {
 
 	// Home
 	.home {
-		grid-template-rows: repeat(2, 1fr);
 		padding: 0;
 
 		&__details {
 			display: inherit;
 			padding: 0 2rem;
-			grid-column: 1 / 13;
+			grid-row: 6 / 11;
 		}
 
 		&__image {
 			display: inherit;
-			grid-column: 5 / 9;
-			grid-row: 1 / 2;
+			grid-column: 5 / 8;
+			grid-row: 2 / 6;
 		}
 
 		&__socials {
+			width: 2rem;
 			grid-column: -1;
-			grid-row: 1 / 1;
+			grid-row: 3 / 3;
+
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			width: 2rem;
-			background-color: $text-secondary-color;
 			padding: 1rem 1.8rem;
+			background-color: $text-secondary-color;
 
 			i {
 				font-size: 2rem;
@@ -222,6 +273,8 @@ body::before {
 
 	// Skills
 	.skills {
+		min-height: inherit;
+
 		&__content {
 			h1,
 			p {
@@ -236,11 +289,32 @@ body::before {
 			}
 		}
 	}
+
+	// Portfolio
+	.portfolio {
+		&__header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__filter {
+			font-family: $text-sans;
+			a:not(:last-child) {
+				margin-right: 0.5rem;
+			}
+		}
+
+		&__gallery {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
 }
 
 @media screen and (min-width: $desktop-breakpoint) {
 	body::before {
-		height: 90vh;
+		height: 75vh;
 		width: 30vw;
 	}
 
@@ -250,15 +324,17 @@ body::before {
 
 		&__details {
 			grid-column: 2 / 8;
-			grid-row: 1 / 2;
+			grid-row: 4 / 7;
 		}
 
 		&__image {
 			grid-column: 9 / 10;
+			grid-row: 3 / 8;
 		}
 
 		&__socials {
 			grid-column: -1;
+			grid-row: 4/ 7;
 		}
 	}
 
@@ -271,6 +347,14 @@ body::before {
 			h1 {
 				margin-right: 4rem;
 			}
+		}
+	}
+
+	// Portfolio
+	.portfolio {
+		&__gallery {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 2rem;
 		}
 	}
 }
