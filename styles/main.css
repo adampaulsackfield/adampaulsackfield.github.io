@@ -22,6 +22,10 @@ a:visited {
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 p,
@@ -509,4 +513,29 @@ body::before {
   .contact__header {
     font-size: 3rem;
   }
+}
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.portfolio__project:nth-child(2) {
+  transition-delay: 200ms;
+}
+.portfolio__project:nth-child(3) {
+  transition-delay: 400ms;
+}
+.portfolio__project:nth-child(4) {
+  transition-delay: 600ms;
+}
+.portfolio__project:nth-child(5) {
+  transition-delay: 800ms;
 }/*# sourceMappingURL=main.css.map */
