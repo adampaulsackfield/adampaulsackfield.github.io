@@ -36,6 +36,27 @@ body::before {
 		margin-right: 3rem;
 		font-family: $text-serif;
 		letter-spacing: 1px;
+		position: relative;
+		padding: 8px 0;
+
+		// Using a :not() and :last-of-type pseudo selector so the underline effect isnt applied to the button
+		&:not(:last-of-type)::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			transform: scaleX(0);
+			bottom: 0;
+			left: 0;
+			background-color: $accent;
+			transform-origin: bottom right;
+			transition: 250ms ease-in-out;
+		}
+
+		&:hover::after {
+			transform: scaleX(1);
+			transform-origin: bottom left;
+		}
 	}
 
 	// Mobile Menu - Hamburger
@@ -423,9 +444,11 @@ body::before {
 
 	// Skills
 	.skills {
-		min-height: inherit;
+		display: flex;
+		flex-direction: column;
 		max-width: 1000px;
 		margin: 0 auto;
+		justify-content: center;
 
 		&__content {
 			p {
@@ -518,7 +541,6 @@ body::before {
 
 	// Home
 	.home {
-		margin-bottom: 5rem;
 		grid-template-rows: 1fr;
 		align-items: center;
 
@@ -538,9 +560,6 @@ body::before {
 
 	// Skills
 	.skills {
-		margin-top: -12rem;
-		margin-bottom: 8rem;
-
 		&__content {
 			display: flex;
 			align-items: center;
@@ -611,35 +630,4 @@ body::before {
 		}
 	}
 }
-// ! DESKTOP BREAKPOINT START
-
-.hidden {
-	opacity: 0;
-	filter: blur(5px);
-	transform: translateX((-100%));
-	transition: all 1s;
-}
-
-.show {
-	opacity: 1;
-	filter: blur(0);
-	transform: translateX((0));
-}
-
-.portfolio__project {
-	&:nth-child(2) {
-		transition-delay: 200ms;
-	}
-
-	&:nth-child(3) {
-		transition-delay: 400ms;
-	}
-
-	&:nth-child(4) {
-		transition-delay: 600ms;
-	}
-
-	&:nth-child(5) {
-		transition-delay: 800ms;
-	}
-}
+// ! DESKTOP BREAKPOINT END
