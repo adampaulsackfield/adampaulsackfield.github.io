@@ -81,7 +81,7 @@ body::before {
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #d3ff56;
+  color: #ff4aae;
 }
 .nav__link {
   display: none;
@@ -99,7 +99,7 @@ body::before {
   transform: scaleX(0);
   bottom: 0;
   left: 0;
-  background-color: #d3ff56;
+  background-color: #ff4aae;
   transform-origin: bottom right;
   transition: 250ms ease-in-out;
 }
@@ -111,13 +111,13 @@ body::before {
   width: 20px;
   height: 2px;
   margin: 4px 0;
-  background-color: #d3ff56;
+  background-color: #ff4aae;
 }
 .nav__menu div:nth-child(2) {
   width: 9px;
 }
 .nav .accent {
-  border: solid 1px #d3ff56;
+  border: solid 1px #ff4aae;
   padding: 0.5rem 1.25rem;
   transition: scale ease-in 300ms;
 }
@@ -138,7 +138,7 @@ body::before {
   font-size: 2.5rem;
 }
 .home__details h1 span {
-  color: #d3ff56;
+  color: #ff4aae;
 }
 .home__details p {
   padding: 1.5rem 0;
@@ -158,7 +158,7 @@ body::before {
 .home__details button i {
   padding-left: 1rem;
   font-size: 1rem;
-  color: #d3ff56;
+  color: #ff4aae;
 }
 .home img {
   max-width: 250px;
@@ -192,7 +192,7 @@ body::before {
 }
 .skills__icons--wrapper p {
   font-size: 1rem;
-  color: #d3ff56;
+  color: #ff4aae;
   font-family: "Cormorant", serif;
 }
 
@@ -211,7 +211,7 @@ body::before {
 }
 .portfolio__filter--active {
   padding-bottom: 0.5rem;
-  border-bottom: solid 2px #d3ff56;
+  border-bottom: solid 2px #ff4aae;
   color: #fff !important;
   font-weight: 700;
   letter-spacing: 2px;
@@ -266,7 +266,7 @@ body::before {
 }
 .journey .experience__item h1 i {
   float: right;
-  color: #d3ff56;
+  color: #ff4aae;
 }
 .journey .experience__item h2 {
   font-size: 0.8rem;
@@ -284,14 +284,14 @@ body::before {
 }
 .journey .experience__item ul li::before {
   content: "•";
-  color: #d3ff56;
+  color: #ff4aae;
   font-weight: bold;
   display: inline-block;
   width: 1rem;
   margin-left: -1rem;
 }
 .journey .accent {
-  color: #d3ff56;
+  color: #ff4aae;
   font-size: 1.25rem;
   font-family: "Cormorant", serif;
   font-weight: 300;
@@ -314,7 +314,7 @@ body::before {
   font-weight: 500;
 }
 .contact__header--accent {
-  color: #d3ff56;
+  color: #ff4aae;
 }
 .contact__text {
   color: rgba(255, 255, 255, 0.75);
@@ -328,18 +328,18 @@ body::before {
   background-color: #474650;
   border: none;
   border-radius: 55px;
-  color: #d3ff56;
+  color: #ff4aae;
   font-weight: 300;
 }
 .contact__button i {
-  color: #d3ff56;
+  color: #ff4aae;
   margin-left: 0.25rem;
 }
 
 .footer-background {
   margin-top: 4rem;
   width: 100vw;
-  background-color: #d3ff56;
+  background-color: #ff4aae;
 }
 
 .footer {
@@ -388,7 +388,7 @@ body::before {
     justify-content: space-around;
     gap: 1rem;
     padding: 1rem 1.8rem;
-    background-color: #d3ff56;
+    background-color: #ff4aae;
   }
   .home__socials i {
     font-size: 2rem;
