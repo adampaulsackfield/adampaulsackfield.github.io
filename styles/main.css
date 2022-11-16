@@ -120,6 +120,8 @@ body::before {
   border: solid 1px #ff4aae;
   padding: 0.5rem 1.25rem;
   transition: scale ease-in 300ms;
+  -webkit-animation: pulse 1000ms infinite ease-in;
+          animation: pulse 1000ms infinite ease-in;
 }
 .nav .accent:hover {
   scale: 1.1;
@@ -390,8 +392,6 @@ body::before {
     gap: 1rem;
     padding: 1rem 1.8rem;
     background-color: #ff4aae;
-    -webkit-animation: pulse 2000ms infinite ease-in;
-            animation: pulse 2000ms infinite ease-in;
   }
   .home__socials i {
     font-size: 2rem;
@@ -537,6 +537,12 @@ body::before {
     font-size: 3rem;
   }
 }
+@media screen and (prefers-reduced-motion) {
+  .accent {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
 .hidden-left {
   opacity: 0;
   filter: blur(5px);
@@ -590,24 +596,24 @@ body::before {
 
 @-webkit-keyframes pulse {
   0% {
-    transform: scale(1);
+    opacity: 1;
   }
   50% {
-    transform: scale(1.1);
+    opacity: 0.6;
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
   }
 }
 
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    opacity: 1;
   }
   50% {
-    transform: scale(1.1);
+    opacity: 0.6;
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
   }
 }/*# sourceMappingURL=main.css.map */
