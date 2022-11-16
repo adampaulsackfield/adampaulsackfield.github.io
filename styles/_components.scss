@@ -36,6 +36,8 @@ body::before {
 		margin-right: 3rem;
 		font-family: $text-serif;
 		letter-spacing: 1px;
+
+		// Underline on hover.
 		position: relative;
 		padding: 8px 0;
 
@@ -406,6 +408,7 @@ body::before {
 		grid-template-rows: 1fr 1fr;
 
 		padding: 0;
+		margin-top: 2rem;
 
 		&__details {
 			padding: 0 2rem;
@@ -550,6 +553,7 @@ body::before {
 		grid-template-rows: 1fr;
 		align-items: center;
 
+		margin-top: 0;
 		&__details {
 			grid-column: 2 / 8;
 			grid-row: 1;

@@ -370,6 +370,7 @@ body::before {
   .home {
     grid-template-rows: 1fr 1fr;
     padding: 0;
+    margin-top: 2rem;
   }
   .home__details {
     padding: 0 2rem;
@@ -474,6 +475,7 @@ body::before {
   .home {
     grid-template-rows: 1fr;
     align-items: center;
+    margin-top: 0;
   }
   .home__details {
     grid-column: 2/8;
