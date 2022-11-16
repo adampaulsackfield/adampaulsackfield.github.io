@@ -428,6 +428,7 @@ body::before {
 			gap: 1rem;
 			padding: 1rem 1.8rem;
 			background-color: $accent;
+			animation: pulse 2000ms infinite ease-in;
 
 			i {
 				font-size: 2rem;
@@ -438,6 +439,11 @@ body::before {
 				font-size: 1.2rem;
 				font-weight: bold;
 				color: $background-light;
+			}
+
+			i:hover,
+			p:hover {
+				color: rgba($color: $background-light, $alpha: 0.8);
 			}
 		}
 	}
