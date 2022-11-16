@@ -389,6 +389,8 @@ body::before {
     gap: 1rem;
     padding: 1rem 1.8rem;
     background-color: #ff4aae;
+    -webkit-animation: pulse 2000ms infinite ease-in;
+            animation: pulse 2000ms infinite ease-in;
   }
   .home__socials i {
     font-size: 2rem;
@@ -398,6 +400,10 @@ body::before {
     font-size: 1.2rem;
     font-weight: bold;
     color: #2a2835;
+  }
+  .home__socials i:hover,
+.home__socials p:hover {
+    color: rgba(42, 40, 53, 0.8);
   }
   .skills {
     display: flex;
@@ -578,4 +584,28 @@ body::before {
 }
 .portfolio__project:nth-child(7) {
   transition-delay: 600ms;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=main.css.map */
