@@ -80,6 +80,7 @@ body::before {
 		padding: 0.5rem 1.25rem;
 
 		transition: scale ease-in 300ms;
+		animation: pulse 1000ms infinite ease-in;
 
 		&:hover {
 			scale: 1.1;
@@ -431,7 +432,6 @@ body::before {
 			gap: 1rem;
 			padding: 1rem 1.8rem;
 			background-color: $accent;
-			animation: pulse 2000ms infinite ease-in;
 
 			i {
 				font-size: 2rem;
@@ -641,3 +641,9 @@ body::before {
 	}
 }
 // ! DESKTOP BREAKPOINT END
+
+@media screen and (prefers-reduced-motion) {
+	.accent {
+		animation: none;
+	}
+}
