@@ -61,6 +61,19 @@ body::before {
 		}
 	}
 
+	// Get in Touch Button - Slight hover effect
+	.accent {
+		border: solid 1px $accent;
+		padding: 0.5rem 1.25rem;
+
+		transition: scale ease-in 300ms;
+		animation: pulse 1000ms infinite ease-in;
+
+		&:hover {
+			scale: 1.1;
+		}
+	}
+
 	// Mobile Menu - Hamburger
 	&__menu {
 		div {
@@ -72,18 +85,6 @@ body::before {
 			&:nth-child(2) {
 				width: 9px;
 			}
-		}
-	}
-	// Get in Touch Button - Slight hover effect
-	.accent {
-		border: solid 1px $accent;
-		padding: 0.5rem 1.25rem;
-
-		transition: scale ease-in 300ms;
-		animation: pulse 1000ms infinite ease-in;
-
-		&:hover {
-			scale: 1.1;
 		}
 	}
 }

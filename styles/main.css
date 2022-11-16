@@ -107,15 +107,6 @@ body::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.nav__menu div {
-  width: 20px;
-  height: 2px;
-  margin: 4px 0;
-  background-color: #ff4aae;
-}
-.nav__menu div:nth-child(2) {
-  width: 9px;
-}
 .nav .accent {
   border: solid 1px #ff4aae;
   padding: 0.5rem 1.25rem;
@@ -125,6 +116,15 @@ body::before {
 }
 .nav .accent:hover {
   scale: 1.1;
+}
+.nav__menu div {
+  width: 20px;
+  height: 2px;
+  margin: 4px 0;
+  background-color: #ff4aae;
+}
+.nav__menu div:nth-child(2) {
+  width: 9px;
 }
 
 .home {
